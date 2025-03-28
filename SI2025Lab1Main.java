@@ -64,7 +64,13 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+        Iterator<Task> iterator = tasks.iterator();
+	while (iterator.hasNext()) {
+	    Task task = iterator.next();
+	    if (task.getName().equals(name)){
+		iterator.remove();
+	    }
+	}
     }
 
     // 2. Find all completed tasks
