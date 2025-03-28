@@ -1,0 +1,17 @@
+HP@Vanesa MINGW64 ~/softversko/SI_2025_lab1_236019 (master)
+$ git log --oneline --graph --all
+*   cc9584f (HEAD -> master, origin/master, origin/HEAD) Merge branch '4-sort-tasks-by-priority'
+|\
+| * 3ad3cb6 (origin/4-sort-tasks-by-priority, 4-sort-tasks-by-priority) Implement 'Sort tasks by priority'
+* |   24c8775 Merge pull request #11 from vanesapoposka/3-list-tasks-sorted-by-name
+|\ \
+| * | 801beb8 (origin/3-list-tasks-sorted-by-name, 3-list-tasks-sorted-by-name) Implement 'List tasks sorted by name'
+| |/
+* |   cab14fe Merge pull request #10 from vanesapoposka/1-remove-a-task-by-name
+|\ \
+| |/
+|/|
+| * 9fad151 (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Implement 'Remove a task by name'
+|/
+* e43b4b4 Add starter code
+* 658ff1a Initial commit

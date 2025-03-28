@@ -1,0 +1,48 @@
+Лабораториска вежба бр.1 (Искористени команди)
+
+4. mkdir SI_2025_lab1_236019
+
+5. git init (Иницијализирање на git)
+git remote add origin https://github.com/vanesapoposka/SI_2025_lab1_236019.git (Поврзување на локалниот git со репото на GitHub)
+
+6. nano README.md
+git add . (Додавање на сите фајлови кои се наоѓаат од Untracked делот во Staging area)
+git commit -m "Initial commit" (Промените се зачувуваат во локално во git репозиториумот)
+
+7. nano SI2025Lab1Main.java
+git add . (Додавање на сите фајлови кои се наоѓаат од Untracked делот во Staging area)
+git commit -m "Add starter code" (Промените се зачувуваат во локално во git репозиториумот)
+
+8. git push origin master (Поставување на промените на репото на GitHub)
+
+13. git fetch origin (Преземање на новите гранки кои се создале)
+
+14.1 git checkout 1-remove-a-task-by-name (Префрлување на нова гранка)
+16.1 git commit -am "Implement 'Remove a task by name'" (Бидејќи се наоѓа во Modified делот, може автоматски да се направи commit -am, односно во исто време и commit и add, па ќе се зачуваат локално во git репозиториумот)
+17.1 git push origin 1-remove-a-task-by-name (Поставување на промените на репото на GitHub, на remote master гранката)
+
+14.2 git checkout 3-list-tasks-sorted-by-name (Префрлување на нова гранка)
+16.2 git commit -am "Implement 'List tasks sorted by name'" (Бидејќи се наоѓа во Modified делот, може автоматски да се направи commit -am, односно во исто време и commit и add, па ќе се зачуваат локално во git репозиториумот)
+17.2 git push origin 3-list-tasks-sorted-by-name (Поставување на промените на репото на GitHub, на remote master гранката)
+
+14.3 git checkout 4-sort-tasks-by-priority (Префрлување на нова гранка)
+16.3 git commit -am "Implement 'Sort tasks by priority'" (Бидејќи се наоѓа во Modified делот, може автоматски да се направи commit -am, односно во исто време и commit и add, па ќе се зачуваат локално во git репозиториумот)
+17.3 git push origin 4-sort-tasks-by-priority (Поставување на промените на репото на GitHub, на remote master гранката)
+
+20.1 Pull request на гранката 1-remove-a-task-by-name - Гранката 1-remove-a-task-by-name на почетокот е идентична со master гранката.
+Откако ќе се имплементира функцијата 1, гранката 1-remove-a-task-by-name, ќе се разликува од гранката master по само новиот commit кој е направен.
+Поради тоа, стратегијата која е искористена во овој случај е Fast-forward, нема да има конфликти и исто така, нема да има нови комити, туку HEAD
+ќе биде преместен на новиот commit во гранката 1-remove-a-task-by-name.
+
+20.2 Pull request на гранката 3-list-tasks-sorted-by-name - Гранката 3-list-tasks-sorted-by-name на почетокот е исто така идентична со master гранката.
+Но сега, во master гранката е имплементирана нова функција која не се наоѓа во гранката 3-list-tasks-sorted. Аналогно во 3-list-tasks-sorted се имплементира нова функција која ја нема на master. Поради тоа, стратегијата која е употребена е Recursive (Three-way-merge), конфликти во овој случај нема да има, бидејќи се менуваат различни делови од кодот и ќе биде создаден нов commit кој ќе ги спои master и 3-list-tasks-sorted.
+
+22. git checkout master (Префрлување на нова гранка)
+git pull --rebase origin master (Преземање на промените од remote master и поставување во локалниот master)
+git merge 4-sort-tasks-by-priority (Спојување на master со 4-sort-tasks-by-priority)
+(Објаснување)
+Овде ќе биде истиот случај како 20.2.
+Merge на гранката 4-sort-tasks-by-priority со master - Гранката 4-sort-tasks-by-priority на почетокот е идентична со master гранката.
+Но сега, во master гранката се имплементирани нови функции кои не се наоѓаат во гранката 4-sort-tasks-by-priority. Аналогно во 4-sort-tasks-by-priority се имплементира нова функција која ја нема на master. Поради тоа, стратегијата која е употребена е Recursive (Three-way-merge), конфликти во овој случај нема да има, бидејќи се менуваат различни делови од кодот и ќе биде создаден нов commit кој ќе ги спои master и 4-sort-tasks-by-priority.
+
+23. git push origin master (Поставување на промените на репото на GitHub, на remote master гранката)
